@@ -57,16 +57,17 @@ public class LoginUser extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
+
                     String Username = UsernameLogin.getText().toString();
                     String Password = PasswordLogin.getText().toString();
 
                     //   if (UserType.equals("User"))
                     {
-                        new loginUser().execute(Username, Password);
+                       // new loginUser().execute(Username, Password);
                     }
                     // if(UserType.equals("Councellor"))
                     {
-                        //   new  loginCouncellor().execute(Username, Password);
+                      new  loginCouncellor().execute(Username, Password);
                     }
                 }
             });
@@ -96,28 +97,17 @@ public class LoginUser extends AppCompatActivity {
 
                     response = client.newCall(request).execute();
                     if (response.isSuccessful()) {
-                        String result = response.body().toString();
+                        String result = response.body().string();
 
                         if (result.equalsIgnoreCase("login")) {
                             Intent i = new Intent(LoginUser.this, DashBoardUser.class);
                             startActivity(i);
                             finish();
 
-
-
-                            // handler.post(showToast);
-                            // showToast(){ run().run{ toast...... } }
                         } else
-                        {
-                            Handler handler = new Handler(Looper.getMainLooper());
-                            handler.post(new Runnable() {
-                            public void run() {
-                                    // UI code goes here
-                                    Toast.makeText(LoginUser.this,"Email or Password mismatched!",Toast.LENGTH_SHORT).show();
+                            {
+                              //      showToast("Username or Password mismatched!");
 
-
-                                }
-                            });
                         }
                     }
 
@@ -128,7 +118,15 @@ public class LoginUser extends AppCompatActivity {
                 return null;
             }
         }
-
+    public void showToast(final String text)
+    {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(LoginUser.this, text, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
         public class loginCouncellor extends AsyncTask<String, Void, String> {
 
             @Override
@@ -152,16 +150,15 @@ public class LoginUser extends AppCompatActivity {
 
                     Response response = client.newCall(request).execute();
                     if (response.isSuccessful()) {
-                        String result = response.body().toString();
+                        String result = response.body().string();
 
                         if (result.equalsIgnoreCase("login")) {
                             Intent i = new Intent(LoginUser.this, DashBoardCouncellor.class);
                             LoginUser.this.startActivity(i);
 
                         } else {
-                            Toast.makeText(LoginUser.this,
-                                    "Email or Password mismatched!",
-                                    Toast.LENGTH_SHORT).show();
+
+                                    showToast("Username or Password mismatched!");
                         }
                     }
 
