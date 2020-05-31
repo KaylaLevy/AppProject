@@ -50,8 +50,8 @@ public class LoginUser extends AppCompatActivity {
 
             final EditText UsernameLogin = (EditText) findViewById(R.id.Login);
             final EditText PasswordLogin = (EditText) findViewById(R.id.Password);
-            EditText Type = (EditText) findViewById(R.id.SelectRole);
-            final String UserType = Type.getText().toString();
+
+
             Button Login = (Button) findViewById(R.id.blogin);
             Login.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -60,14 +60,15 @@ public class LoginUser extends AppCompatActivity {
 
                     String Username = UsernameLogin.getText().toString();
                     String Password = PasswordLogin.getText().toString();
-
-                    //   if (UserType.equals("User"))
+                    final EditText Type = (EditText) findViewById(R.id.SelectRole);
+                    final String UserType = Type.getText().toString();
+                      if (UserType.equals("User"))
                     {
-                       // new loginUser().execute(Username, Password);
+                        new loginUser().execute(Username, Password);
                     }
-                    // if(UserType.equals("Councellor"))
+                    else if(UserType.equals ("Councellor"))
                     {
-                      new  loginCouncellor().execute(Username, Password);
+                       new  loginCouncellor().execute(Username, Password);
                     }
                 }
             });
