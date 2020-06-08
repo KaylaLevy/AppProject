@@ -25,21 +25,21 @@
         android:id="@+id/SelectRole"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:hint="User/Councellor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354"
+        app:layout_constraintVertical_bias="0.361"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Login"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:hint="Username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,14 +51,16 @@
         android:id="@+id/Password"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:hint="Password"
+        android:inputType="textPassword"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="MissingConstraints,MissingPrefix" />
 
     <TextView
         android:id="@+id/RegisterLink"
@@ -97,4 +99,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
