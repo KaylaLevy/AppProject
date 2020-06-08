@@ -16,10 +16,19 @@ public class DashBoardUser extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board_user);
 
         Button Chat = (Button) findViewById(R.id.Chatnow);
+        Button Quiz = (Button) findViewById(R.id.Quiz);
         Chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DashBoardUser.this, Chat.class);
+                startActivity(i);
+            }
+        });
+
+        Quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashBoardUser.this, Quiz.class);
                 startActivity(i);
             }
         });
