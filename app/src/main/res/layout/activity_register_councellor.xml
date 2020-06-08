@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register2">
+    android:background="@drawable/signup"
+    tools:context=".RegisterCouncellor">
 
     <EditText
         android:id="@+id/NameFirst"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:background="#11000000"
         android:hint="First name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241"
+        app:layout_constraintVertical_bias="0.316"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/EmailCouncellor"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:background="#11000000"
         android:hint="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
+        app:layout_constraintVertical_bias="0.596"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -37,58 +40,49 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:hint="Last name"
+        android:background="#11000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331"
+        app:layout_constraintVertical_bias="0.403"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/UsernameCouncellor"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:background="#11000000"
         android:hint="Username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/PasswordCouncellor"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:background="#11000000"
         android:hint="Password"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
-        tools:ignore="MissingConstraints"
-        android:inputType="textPassword"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="318dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:text="Register"
-        android:textSize="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.693"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/register2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttoncolor"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,4 +90,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.821" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="116dp"
+        android:layout_height="144dp"
+        android:src="@drawable/councellor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

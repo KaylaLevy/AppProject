@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register1">
+    android:background="@drawable/signup"
+    tools:context=".RegisterUser">
 
 
     <EditText
@@ -12,11 +13,13 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:hint="Username"
+        android:background="#11000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295"
+        app:layout_constraintVertical_bias="0.486"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -24,36 +27,38 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:hint="Password"
+        android:background="#11000000"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424"
-        tools:ignore="MissingConstraints"
-        android:inputType="textPassword"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="318dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:text="Register"
-        android:textSize="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.61"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/register2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttoncolor"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.813" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="141dp"
+        android:layout_height="125dp"
+        android:src="@drawable/profileess"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
