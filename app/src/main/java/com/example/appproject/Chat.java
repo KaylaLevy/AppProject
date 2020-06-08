@@ -27,7 +27,7 @@ public class Chat extends AppCompatActivity implements RoomListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.activity_chat2);
 
         editText = (EditText) findViewById(R.id.editText);
 
