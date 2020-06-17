@@ -4,21 +4,29 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.sax.Element;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Quiz extends AppCompatActivity {
+public class AboutUs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
-
+        setContentView(R.layout.activity_about_us);
+        //FB Link
+        TextView linkFb = (TextView) findViewById(R.id.FBLink);
+        linkFb.setMovementMethod(LinkMovementMethod.getInstance());
+        linkFb.setLinkTextColor(Color.WHITE);
+        //Nav bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
 
-        bottomNavigationView.setSelectedItemId(R.id.Link);
+        bottomNavigationView.setSelectedItemId(R.id.AbtUs);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -30,8 +38,6 @@ public class Quiz extends AppCompatActivity {
                         return true;
 
                     case R.id.AbtUs:
-                        startActivity(new Intent(getApplicationContext(),AboutUs.class));
-                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.Library:
@@ -43,7 +49,8 @@ public class Quiz extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.Link:
-
+                        startActivity(new Intent(getApplicationContext(),Quiz.class));
+                        overridePendingTransition(0,0);
                         return true;
                 }
                 return false;

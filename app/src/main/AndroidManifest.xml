@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appproject">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Chat"></activity>
+        <activity android:name=".CouncellorMessage"></activity>
+        <activity android:name=".Libruary" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".MessagingUser" />
+        <activity android:name=".Chat" />
         <activity android:name=".Quiz2" />
         <activity android:name=".Quiz" />
         <activity android:name=".LoginUser" />

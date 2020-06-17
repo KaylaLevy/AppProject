@@ -29,96 +29,97 @@ public class LoginUser extends AppCompatActivity {
         setContentView(R.layout.activity_login_user);
 
 
-            final TextView RegisterLink = (TextView) findViewById(R.id.RegisterLink);
-            final TextView RegisterLink2 = (TextView) findViewById(R.id.RegisterLink2);
+        final TextView RegisterLink = (TextView) findViewById(R.id.RegisterLink);
+        final TextView RegisterLink2 = (TextView) findViewById(R.id.RegisterLink2);
 
-            RegisterLink.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(LoginUser.this, RegisterUser.class);
-                    LoginUser.this.startActivity(i);
-                }
-            });
-
-            RegisterLink2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent t = new Intent(LoginUser.this, RegisterCouncellor.class);
-                    LoginUser.this.startActivity(t);
-                }
-            });
-
-            final EditText UsernameLogin = (EditText) findViewById(R.id.Login);
-            final EditText PasswordLogin = (EditText) findViewById(R.id.Password);
-
-
-            Button Login = (Button) findViewById(R.id.blogin);
-            Login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-
-                    String Username = UsernameLogin.getText().toString();
-                    String Password = PasswordLogin.getText().toString();
-                    final EditText Type = (EditText) findViewById(R.id.SelectRole);
-                    final String UserType = Type.getText().toString();
-                      if (UserType.equals("User"))
-                    {
-                        new loginUser().execute(Username, Password);
-                    }
-                    else if(UserType.equals ("Councellor"))
-                    {
-                       new  loginCouncellor().execute(Username, Password);
-                    }
-                }
-            });
-        }
-
-        public class loginUser extends AsyncTask<String, Void, String> {
-
+        RegisterLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            protected String doInBackground(String... strings) {
-                String Username = strings[0];
-                String Password = strings[1];
+            public void onClick(View v) {
+                Intent i = new Intent(LoginUser.this, RegisterUser.class);
+                LoginUser.this.startActivity(i);
+            }
+        });
+
+        RegisterLink2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent t = new Intent(LoginUser.this, RegisterCouncellor.class);
+                LoginUser.this.startActivity(t);
+            }
+        });
+
+        final EditText UsernameLogin = (EditText) findViewById(R.id.Login);
+        final EditText PasswordLogin = (EditText) findViewById(R.id.Password);
 
 
-                OkHttpClient client = new OkHttpClient();
+        Button Login = (Button) findViewById(R.id.blogin);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                RequestBody formBody = new FormBody.Builder()
-                        .add("USER_USERNAME", Username)
-                        .add("USER_PASSWORD", Password)
-                        .build();
 
-                Request request = new Request.Builder()
-                        .url(url_loginUser)
-                        .post(formBody)
-                        .build();
-                Response response = null;
-                try {
+                String Username = UsernameLogin.getText().toString();
+                String Password = PasswordLogin.getText().toString();
+                final EditText Type = (EditText) findViewById(R.id.SelectRole);
+                final String UserType = Type.getText().toString();
+                if (UserType.equals("User"))
+                {
+                    new loginUser().execute(Username, Password);
+                }
+                else if(UserType.equals ("Councellor"))
+                {
+                    new  loginCouncellor().execute(Username, Password);
+                }
+            }
+        });
+    }
 
-                    response = client.newCall(request).execute();
-                    if (response.isSuccessful()) {
-                        String result = response.body().string();
+    public class loginUser extends AsyncTask<String, Void, String> {
 
-                        if (result.equalsIgnoreCase("login")) {
-                            Intent i = new Intent(LoginUser.this, DashBoardUser.class);
-                            startActivity(i);
-                            finish();
+        @Override
+        protected String doInBackground(String... strings) {
+            String Username = strings[0];
+            String Password = strings[1];
 
-                        } else
-                            {
-                              //      showToast("Username or Password mismatched!");
 
-                        }
+            OkHttpClient client = new OkHttpClient();
+
+            RequestBody formBody = new FormBody.Builder()
+                    .add("USER_USERNAME", Username)
+                    .add("USER_PASSWORD", Password)
+                    .build();
+
+            Request request = new Request.Builder()
+                    .url(url_loginUser)
+                    .post(formBody)
+                    .build();
+            Response response = null;
+            try {
+
+                response = client.newCall(request).execute();
+                if (response.isSuccessful()) {
+                    String result = response.body().string();
+
+                    if (result.equalsIgnoreCase("login")) {
+                        showToast("Login Successful");
+                        Intent i = new Intent(LoginUser.this, DashBoardUser.class);
+                        startActivity(i);
+                        finish();
+
+                    } else
+                    {
+                       showToast("Username or Password mismatched!");
+
                     }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
 
-                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
+            return null;
         }
+    }
     public void showToast(final String text)
     {
         this.runOnUiThread(new Runnable() {
@@ -128,49 +129,49 @@ public class LoginUser extends AppCompatActivity {
             }
         });
     }
-        public class loginCouncellor extends AsyncTask<String, Void, String> {
+    public class loginCouncellor extends AsyncTask<String, Void, String> {
 
-            @Override
-            protected String doInBackground(String... strings) {
-                String Username2 = strings[0];
-                String Password2 = strings[1];
+        @Override
+        protected String doInBackground(String... strings) {
+            String Username2 = strings[0];
+            String Password2 = strings[1];
 
-                OkHttpClient client = new OkHttpClient();
+            OkHttpClient client = new OkHttpClient();
 
-                RequestBody formBody = new FormBody.Builder()
-                        .add("COUNCELLOR_USERNAME", Username2)
-                        .add("COUNCELLOR_PASSWORD", Password2)
-                        .build();
+            RequestBody formBody = new FormBody.Builder()
+                    .add("COUNCELLOR_USERNAME", Username2)
+                    .add("COUNCELLOR_PASSWORD", Password2)
+                    .build();
 
-                Request request = new Request.Builder()
-                        .url(url_loginCouncellor)
-                        .post(formBody)
-                        .build();
+            Request request = new Request.Builder()
+                    .url(url_loginCouncellor)
+                    .post(formBody)
+                    .build();
 
-                try {
+            try {
 
-                    Response response = client.newCall(request).execute();
-                    if (response.isSuccessful()) {
-                        String result = response.body().string();
+                Response response = client.newCall(request).execute();
+                if (response.isSuccessful()) {
+                    String result = response.body().string();
 
-                        if (result.equalsIgnoreCase("login")) {
-                            Intent i = new Intent(LoginUser.this, DashBoardCouncellor.class);
-                            LoginUser.this.startActivity(i);
+                    if (result.equalsIgnoreCase("login")) {
+                        showToast("Login Successful");
+                        Intent i = new Intent(LoginUser.this, DashBoardCouncellor.class);
+                        LoginUser.this.startActivity(i);
 
-                        } else {
+                    } else {
 
-                                    showToast("Username or Password mismatched!");
-                        }
+                        showToast("Username or Password mismatched!");
                     }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
 
-                return null;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
+            return null;
         }
-
-
     }
 
+
+}

@@ -34,11 +34,13 @@ public class RegisterCouncellor extends AppCompatActivity {
             ReturnBackToSignInPageFromRegisterCouncellor.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     String FirstName = etFName.getText().toString();
                     String LastName = etLName.getText().toString();
                     String UserName2 = etUsername2.getText().toString();
                     String Email = etEmail.getText().toString();
                     String Password2 = etPassword2.getText().toString();
+
                     new Register_User().execute(FirstName,LastName,UserName2,Email,Password2);
 
                 }

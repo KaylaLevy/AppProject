@@ -87,6 +87,7 @@ public class Chat extends AppCompatActivity implements RoomListener {
             final MemberData data = mapper.treeToValue(receivedMessage.getMember().getClientData(), MemberData.class);
             boolean belongsToCurrentUser = receivedMessage.getClientID().equals(scaledrone.getClientID());
             final Message message = new Message(receivedMessage.getData().asText(), data, belongsToCurrentUser);
+            System.out.println("hiiiiii"+ message);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -120,4 +121,3 @@ public class Chat extends AppCompatActivity implements RoomListener {
 
 
 }
-

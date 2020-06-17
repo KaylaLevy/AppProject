@@ -4,4 +4,33 @@
     <string name="write_a_message">Write a message</string>
     <string name="todo" />
     <string name="login">Login</string>
+    <string name="title_activity_user_navig">UserNavig</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="about_us">ABOUT US</string>
+
+    <string name="linktoFB">
+        <a href="https://www.facebook.com/psych.central.562">Follow us on Facebook</a></string>
+    <string name="linkLibruary1">
+        <a href="https://www.psychologytoday.com/us/blog/skinny-revisited/201805/self-care-101">Self Care</a></string>
+    <string name="linkLibruary2">
+        <a href="https://www.lifehack.org/articles/communication/30-ways-practice-self-love-and-good-yourself.html">Self Love</a></string>
+    <string name="linkLibruary3">
+        <a href="https://www.lifehack.org/articles/communication/10-ways-have-excellent-communication-with-your-loved-one.html">How to communicate with loved ones</a></string>
+    <string name="linkLibruary4">
+        <a href="https://www.healthyplace.com/other-info/mental-health-newsletter/are-you-afraid-to-ask-for-mental-health-help">How to ask for help?</a></string>
+    <string name="linkLibruary5">
+        <a href="https://www.militaryonesource.mil/confidential-help/specialty-consultations/building-healthy-relationships/building-healthy-relationships">Building healthy relationships</a></string>
+    <string name="linkLibruary6">
+        <a href="http://thinksimplenow.com/happiness/the-art-of-building-self-esteem/">Self Esteem</a></string>
 </resources>
