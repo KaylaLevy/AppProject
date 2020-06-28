@@ -23,6 +23,10 @@ public class LoginUser extends AppCompatActivity {
     final String url_loginUser = "https://lamp.ms.wits.ac.za/home/s2141916/LoginsUser.php";
     final String url_loginCouncellor = "https://lamp.ms.wits.ac.za/home/s2141916/LoginsCouncellor.php";
 
+    private static String currentUsername;
+    public static String getCurrentUsername(){
+        return  currentUsername;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,7 +109,7 @@ public class LoginUser extends AppCompatActivity {
                         Intent i = new Intent(LoginUser.this, DashBoardUser.class);
                         startActivity(i);
                         finish();
-
+                        currentUsername = Username;
                     } else
                     {
                        showToast("Username or Password mismatched!");
@@ -155,6 +159,7 @@ public class LoginUser extends AppCompatActivity {
                     String result = response.body().string();
 
                     if (result.equalsIgnoreCase("login")) {
+                        currentUsername = Username2;
                         showToast("Login Successful");
                         Intent i = new Intent(LoginUser.this, DashBoardCouncellor.class);
                         LoginUser.this.startActivity(i);

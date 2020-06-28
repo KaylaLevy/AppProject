@@ -23,6 +23,16 @@ public class DashBoardUser extends AppCompatActivity implements ExampleDialog.Ex
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board_user);
 
+
+        Button btnFindPsyc = (Button)findViewById(R.id.btnFindPsyc);
+        btnFindPsyc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashBoardUser.this, q_gender.class);
+                DashBoardUser.this.startActivity(i);
+            }
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
 
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -46,10 +56,7 @@ public class DashBoardUser extends AppCompatActivity implements ExampleDialog.Ex
                         startActivity(new Intent(getApplicationContext(), MessagingUser.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.Link:
-                        startActivity(new Intent(getApplicationContext(), Quiz.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+
                 }
                 return false;
             }

@@ -46,6 +46,7 @@
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name3"
         android:hint="  User/Councellor"
+        android:inputType = "text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
         android:id="@+id/Login"
         android:layout_width="301dp"
         android:layout_height="57dp"
-
+        android:inputType = "text"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name"
         app:layout_constraintBottom_toBottomOf="parent"

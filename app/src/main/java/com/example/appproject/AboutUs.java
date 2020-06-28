@@ -48,10 +48,7 @@ public class AboutUs extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),MessagingUser.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.Link:
-                        startActivity(new Intent(getApplicationContext(),Quiz.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
                 }
                 return false;
             }

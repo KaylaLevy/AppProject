@@ -44,7 +44,21 @@
         app:layout_constraintHorizontal_bias="0.794"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintVertical_bias="0.391" />
+
+    <Button
+        android:id="@+id/btnFindPsyc"
+        android:layout_width="233dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoncolor"
+        android:text="Find a psychologist"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -57,17 +71,16 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="368dp"
         android:text=" If you plan on being anything less than what you are capable of being, you will
 probably be unhappy all the days of your life - Abraham Maslow "
         android:textSize="20sp"
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SignOut"

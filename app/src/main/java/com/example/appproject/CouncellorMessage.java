@@ -56,10 +56,7 @@ public class CouncellorMessage extends AppCompatActivity {
 
                         return true;
 
-                    case R.id.Connect:
-                        startActivity(new Intent(getApplicationContext(),Quiz2.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
                 }
                 return false;
             }

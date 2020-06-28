@@ -19,6 +19,15 @@ public class DashBoardCouncellor extends AppCompatActivity implements ExampleDia
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board_councellor);
 
+        Button btnDBC_next = (Button)findViewById(R.id.btnNext);
+        btnDBC_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashBoardCouncellor.this, c_gender.class);
+                DashBoardCouncellor.this.startActivity(i);
+            }
+        });
+
         BottomNavigationView bottomNavigationView2 = findViewById(R.id.bottomNav2);
 
         bottomNavigationView2.setSelectedItemId(R.id.Home);
@@ -35,10 +44,7 @@ public class DashBoardCouncellor extends AppCompatActivity implements ExampleDia
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.Connect:
-                        startActivity(new Intent(getApplicationContext(),Quiz2.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
                 }
                 return false;
             }

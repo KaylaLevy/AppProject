@@ -65,10 +65,7 @@ public class MessagingUser extends AppCompatActivity {
                         return true;
                     case R.id.Chat:
                         return true;
-                    case R.id.Link:
-                        startActivity(new Intent(getApplicationContext(),Quiz.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
                 }
                 return false;
             }
