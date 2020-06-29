@@ -97,7 +97,7 @@ public class c_issues2 extends AppCompatActivity {
                     if (result.equalsIgnoreCase("issue entered successfully")) {
                         showToast("issue entered successfully");
 
-                        Intent i = new Intent(c_issues2.this, DashBoardCouncellor.class);
+                        Intent i = new Intent(c_issues2.this, LoginUser.class);
                         c_issues2.this.startActivity(i);
                     } else {
                         showToast("oops! please try again!");

@@ -30,8 +30,8 @@ public class RegisterCouncellor extends AppCompatActivity {
             etEmail= (EditText) findViewById(R.id.EmailCouncellor);
             etPassword2 = (EditText) findViewById(R.id.PasswordCouncellor);
 
-            Button ReturnBackToSignInPageFromRegisterCouncellor = (Button) findViewById(R.id.register2);
-            ReturnBackToSignInPageFromRegisterCouncellor.setOnClickListener(new View.OnClickListener() {
+            Button QuizCouncellor = (Button) findViewById(R.id.register2);
+            QuizCouncellor.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -80,7 +80,7 @@ public class RegisterCouncellor extends AppCompatActivity {
 
                         if (result.equalsIgnoreCase("User registered successfully")) {
                             showToast("Register successful");
-                            Intent i = new Intent(RegisterCouncellor.this, MainActivity.class);
+                            Intent i = new Intent(RegisterCouncellor.this, c_gender.class);
                             startActivity(i);
                             finish();
                         } else if (result.equalsIgnoreCase("User already exists")) {

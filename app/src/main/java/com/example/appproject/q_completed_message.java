@@ -63,7 +63,7 @@ public class q_completed_message extends AppCompatActivity {
                     //if (result.equalsIgnoreCase("21")) {
                       //  showToast("21");
 
-                        Intent i =  new Intent(q_completed_message.this, DashBoardUser.class);
+                        Intent i =  new Intent(q_completed_message.this, LoginUser.class);
                         startActivity(i);
                     //} else {
                       //  showToast("oops! please try again!");

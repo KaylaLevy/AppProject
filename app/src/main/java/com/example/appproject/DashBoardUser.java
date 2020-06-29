@@ -24,14 +24,7 @@ public class DashBoardUser extends AppCompatActivity implements ExampleDialog.Ex
         setContentView(R.layout.activity_dash_board_user);
 
 
-        Button btnFindPsyc = (Button)findViewById(R.id.btnFindPsyc);
-        btnFindPsyc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashBoardUser.this, q_gender.class);
-                DashBoardUser.this.startActivity(i);
-            }
-        });
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
 

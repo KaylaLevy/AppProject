@@ -28,8 +28,8 @@ public class RegisterUser extends AppCompatActivity {
             etName = (EditText) findViewById(R.id.etName);
             etPassword = (EditText) findViewById(R.id.etPassword);
 
-            ReturnBackToSignInPageFromRegisterUser = (Button) findViewById(R.id.register2);
-            ReturnBackToSignInPageFromRegisterUser.setOnClickListener(new View.OnClickListener() {
+           Button UserQuiz = (Button) findViewById(R.id.register2);
+            UserQuiz.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String Name = etName.getText().toString();
@@ -68,7 +68,7 @@ public class RegisterUser extends AppCompatActivity {
 
                         if (result.equalsIgnoreCase("User registered successfully")) {
                             showToast("Register successful");
-                            Intent i = new Intent(RegisterUser.this, MainActivity.class);
+                            Intent i = new Intent(RegisterUser.this,  q_gender.class);
                             startActivity(i);
                             finish();
                         } else if (result.equalsIgnoreCase("User already exists")) {

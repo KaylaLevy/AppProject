@@ -19,14 +19,14 @@ public class DashBoardCouncellor extends AppCompatActivity implements ExampleDia
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board_councellor);
 
-        Button btnDBC_next = (Button)findViewById(R.id.btnNext);
+       /* Button btnDBC_next = (Button)findViewById(R.id.btnNext);
         btnDBC_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DashBoardCouncellor.this, c_gender.class);
                 DashBoardCouncellor.this.startActivity(i);
             }
-        });
+        });*/
 
         BottomNavigationView bottomNavigationView2 = findViewById(R.id.bottomNav2);
 
