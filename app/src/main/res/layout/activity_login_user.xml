@@ -23,49 +23,78 @@
         app:srcCompat="@drawable/profileess"
         tools:ignore="MissingConstraints" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="144dp"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/RadUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textSize="18sp"
+            app:buttonTint="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.597"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.336"
+
+            />
+
+
+        <RadioButton
+            android:id="@+id/RadCounselor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Counselor"
+            android:textSize="18sp"
+            app:buttonTint="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.381" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/blogin"
         android:layout_width="301dp"
         android:layout_height="41dp"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttoncolor"
         android:paddingBottom="10dp"
         android:text="@string/login"
-        android:background="@drawable/buttoncolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/SelectRole"
-        android:layout_width="301dp"
-        android:layout_height="57dp"
-        android:background="#11000000"
-        android:drawableLeft="@drawable/ic_action_name3"
-        android:hint="  User/Councellor"
-        android:inputType = "text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.823"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Login"
         android:layout_width="301dp"
         android:layout_height="57dp"
-        android:inputType = "text"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintVertical_bias="0.569"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -80,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintVertical_bias="0.709"
         tools:ignore="MissingConstraints,MissingPrefix" />
 
     <TextView
@@ -110,5 +139,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="136dp"
+        android:layout_height="56dp"
+        android:text="Please select your Role"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

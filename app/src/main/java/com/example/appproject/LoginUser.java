@@ -1,8 +1,12 @@
 package com.example.appproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatRadioButton;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +14,8 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +28,8 @@ import okhttp3.Response;
 public class LoginUser extends AppCompatActivity {
     final String url_loginUser = "https://lamp.ms.wits.ac.za/home/s2141916/LoginsUser.php";
     final String url_loginCouncellor = "https://lamp.ms.wits.ac.za/home/s2141916/LoginsCouncellor.php";
+    RadioGroup radioGroup;
+    RadioButton radioButton;
 
     private static String currentUsername;
     public static String getCurrentUsername(){
@@ -58,25 +66,44 @@ public class LoginUser extends AppCompatActivity {
 
         Button Login = (Button) findViewById(R.id.blogin);
         Login.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onClick(View v) {
 
 
                 String Username = UsernameLogin.getText().toString();
                 String Password = PasswordLogin.getText().toString();
-                final EditText Type = (EditText) findViewById(R.id.SelectRole);
-                final String UserType = Type.getText().toString();
-                if (UserType.equals("User"))
+            //    final EditText Type = (EditText) findViewById(R.id.SelectRole);
+              //  final String UserType = Type.getText().toString();
+
+                RadioButton User = findViewById(R.id.RadUser);
+                RadioButton Counselor = findViewById(R.id.RadCounselor);
+
+
+                if (User.isChecked() )
                 {
                     new loginUser().execute(Username, Password);
                 }
-                else if(UserType.equals ("Councellor"))
+                else
+                    if(Counselor.isChecked())
                 {
                     new  loginCouncellor().execute(Username, Password);
                 }
+
+                    else
+                    if(!Counselor.isChecked() && !User.isChecked())
+                    {
+                        showToast("Please select a role");
+                    }
             }
         });
     }
+
+     /* public void checkButton(View v){
+
+        Toast.makeText(this,"Selected Radio Button" + radioButton.getText(),Toast.LENGTH_SHORT).show() ;
+
+      }*/
 
     public class loginUser extends AsyncTask<String, Void, String> {
 
